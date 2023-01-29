@@ -6,10 +6,15 @@ currentDay.text(today.format("D MMM YYYY"));
 
 $('.saveBtn').on('click', function(event){
    // const input = event
-    var input = $(this).siblings('.description').val();
+    const input = $(this).siblings('.description').val();
     console.log(input)
+    //$(this).siblings('.description').text(input);
+    localStorage.setItem("9am", input);
 }
+
  )
 
- var value = $(this).siblings('.description').val();
 
+
+ var test = localStorage.getItem("9am");
+ console.log(test)

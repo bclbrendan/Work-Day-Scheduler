@@ -8,7 +8,7 @@ $('.saveBtn').on('click', function(event){
    // const input = event
     const input = $(this).siblings('.description').val();
     console.log(input)
-    //$(this).siblings('.description').text(input);
+    //$(this).siblings('.description').text(input); to copy the 
     localStorage.setItem("9am", input);
 }
 
@@ -18,3 +18,8 @@ $('.saveBtn').on('click', function(event){
 
  var test = localStorage.getItem("9am");
  console.log(test)
+var test1 = $('#9am').children('.description')
+console.log(test1)
+$('#9am').children('textarea').text(test)
+
+//$(this).siblings('.description').text(test)

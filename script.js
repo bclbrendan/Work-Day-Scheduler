@@ -26,6 +26,13 @@ console.log(test1)
 $('#9am').children('textarea').text(test)
 
 
-var test3 = $('body').children('.container')[1]
+var test3 = $('body').children('.container')
 console.log(test3)
 
+test3.each(function(index){
+//var hour1 = $('body').children('.container')[index].children('.row').children('.hour').children('time-block').text
+var hour1 = test3.children.children.text()
+//.children('.row').children('.hour')
+console.log(hour1);
+
+})

@@ -10,7 +10,8 @@ $('.saveBtn').on('click', function(event){
     console.log(input)
     //$(this).siblings('.description').text(input); to copy the 
     
-    var timeslot =  $(this).siblings('.hour').children('.time-block').text();
+    //var timeslot =  $(this).siblings('.hour').children('.time-block').text();
+    var timeslot = $(this).parent().parent('.container')
     console.log(timeslot)
     localStorage.setItem(timeslot, input);
 }
@@ -30,9 +31,11 @@ var test3 = $('body').children('.container')
 console.log(test3)
 
 test3.each(function(index){
-//var hour1 = $('body').children('.container')[index].children('.row').children('.hour').children('time-block').text
-var hour1 = test3.children.children.text()
+var hour1 = $('body').children('.container')[index].children[0].children[0].children[0].textContent
+//var hour1 = test3.children.children.text()
 //.children('.row').children('.hour')
 console.log(hour1);
+console.log(index);
+
 
 })
